@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.OrderHistoryController">
+   <TableView fx:id="OrderH_TV" layoutX="25.0" layoutY="109.0" prefHeight="520.0" prefWidth="950.0"
+              AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0"
+              AnchorPane.topAnchor="155.0">
+      <columns>
+         <TableColumn fx:id="ID_order_col" prefWidth="98.0" text="Номер заказа"/>
+         <TableColumn fx:id="Product_col" prefWidth="192.0" text="Товар"/>
+         <TableColumn fx:id="Catogory_col" prefWidth="222.0" text="Категория"/>
+         <TableColumn fx:id="Price_col" prefWidth="74.0" text="Цена"/>
+         <TableColumn fx:id="Amount_col" text="Количество"/>
+         <TableColumn fx:id="Client_col" prefWidth="189.0" text="Заказчик"/>
+         <TableColumn fx:id="Date_col" prefWidth="100.0" text="Дата "/>
+         <TableColumn fx:id="Discount_col" prefWidth="67.0" resizable="false" text="Скидка"/>
+         <TableColumn fx:id="TotalCost_col" prefWidth="135.0" resizable="false" text="Общая стоимость"/>
+      </columns>
+   </TableView>
+   <AnchorPane prefHeight="60.0" prefWidth="850.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label layoutX="494.0" layoutY="13.0" prefHeight="35.0" prefWidth="213.0" text="История заказов"
+             textFill="WHITE" AnchorPane.leftAnchor="494.0" AnchorPane.rightAnchor="493.0"
+             AnchorPane.topAnchor="13.0">
+         <font>
+            <Font name="System Bold Italic" size="24.0"/>
+         </font>
+      </Label>
+   </AnchorPane>
+   <ComboBox fx:id="ID_CB" layoutX="25.0" layoutY="97.0" prefHeight="32.0" prefWidth="96.0" promptText="№ Заказа"/>
+
+   <TextField fx:id="Product_TF" layoutX="152.0" layoutY="97.0" prefHeight="32.0" prefWidth="149.0" promptText="Товар"/>
+   <ImageView fx:id="Excel_img" accessibleRole="BUTTON" fitHeight="32.0" fitWidth="32.0" layoutX="767.0" layoutY="54.0"
+              pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Images/excel.png"/>
+   </ImageView>
+   <Text fx:id="Order_text" layoutX="939.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Сумма за заказ:" visible="false">
+      <font>
+         <Font name="System Bold" size="18.0"/>
+      </font>
+   </Text>
+   <Label fx:id="Sum_label" layoutX="1093.0" layoutY="102.0" text="0.0">
+      <font>
+         <Font name="System Bold Italic" size="18.0"/>
+      </font>
+   </Label>
+   <Text fx:id="AllOrder_text" layoutX="891.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Сумма за все заказы:">
+      <font>
+         <Font name="System Bold" size="18.0"/>
+      </font>
+   </Text>
+   <DatePicker fx:id="Date_start_DP" layoutX="333.0" layoutY="97.0" prefHeight="32.0" prefWidth="149.0" promptText="C"/>
+   <DatePicker fx:id="Date_finish_DP" layoutX="516.0" layoutY="97.0" prefHeight="32.0" prefWidth="149.0"
+               promptText="По"/>
+   <ImageView fx:id="Update_img" fitHeight="28.0" fitWidth="28.0" layoutX="721.0" layoutY="101.0" pickOnBounds="true"
+              preserveRatio="true">
+      <Image url="@../Images/arrow1.png"/>
+   </ImageView>
+   <Text fx:id="SumPeriod_text" layoutX="919.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Сумма за период:" visible="false">
+      <font>
+         <Font name="System Bold" size="18.0"/>
+      </font>
+   </Text>
+   <Button fx:id="Update_btn" layoutX="749.0" layoutY="97.0" maxHeight="32.0" maxWidth="34.0" minHeight="32.0"
+           minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0"/>
+   <ImageView fx:id="Search_img" accessibleRole="BUTTON" fitHeight="28.0" fitWidth="28.0" layoutX="674.0"
+              layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Images/search.png"/>
+   </ImageView>
+   <Button fx:id="Search_btn" layoutX="701.0" layoutY="97.0" maxHeight="32.0" maxWidth="34.0" minHeight="32.0"
+           minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0"/>
+   <Text fx:id="Product_text" layoutX="913.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Сумма по товару:" visible="false">
+      <font>
+         <Font name="System Bold" size="18.0"/>
+      </font>
+   </Text>
+   <Button fx:id="Excel_btn" layoutX="799.0" layoutY="97.0" maxHeight="32.0" maxWidth="34.0" minHeight="32.0"
+           minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0"/>
+
+</AnchorPane>

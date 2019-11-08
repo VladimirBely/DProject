@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SupplyRegistrationController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="215.0" layoutY="9.0" prefHeight="32.0" prefWidth="121.0" text="Поставка" textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="9.0">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="Supplies_TV" layoutX="25.0" layoutY="125.0" prefHeight="120.0" prefWidth="500.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="ID_supply_col" prefWidth="133.0" text="№ Поставки" />
+          <TableColumn fx:id="Supplier_col" prefWidth="234.0" text="Поставщик" />
+            <TableColumn fx:id="Date_supply_col" prefWidth="142.0" resizable="false" text="Дата" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="Supplier_CB" layoutX="25.0" layoutY="70.0" prefHeight="30.0" prefWidth="150.0" promptText="Поставщик" AnchorPane.leftAnchor="25.0" />
+      <DatePicker fx:id="Date_supply_DP" layoutX="200.0" layoutY="70.0" prefHeight="30.0" prefWidth="150.0" promptText="Дата" />
+      <Button fx:id="Delete_Supply_btn" layoutX="455.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Удалить" AnchorPane.rightAnchor="25.0" />
+      <Button fx:id="Add_supply_btn" layoutX="373.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Добавить" />
+      <AnchorPane layoutY="274.0" prefHeight="50.0" prefWidth="555.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="174.0" layoutY="9.0" prefHeight="32.0" prefWidth="202.0" text="Детали поставки" textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="9.0">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="SupplyDetails_TV" layoutX="25.0" layoutY="400.0" prefHeight="180.0" prefWidth="500.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <columns>
+            <TableColumn fx:id="Product_col" prefWidth="195.0" text="Наименование продукта" />
+            <TableColumn fx:id="Supply_ID_col" prefWidth="145.0" text="№ Поставки" />
+            <TableColumn fx:id="Amount_col" prefWidth="170.0" resizable="false" text="Количество" />
+            <TableColumn fx:id="ID_SD_col" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" text="ID" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="ID_supply_CB" layoutX="175.0" layoutY="345.0" prefHeight="30.0" prefWidth="111.0" promptText="№ Поставки" />
+      <ComboBox fx:id="Product_CB" layoutX="25.0" layoutY="345.0" prefHeight="30.0" prefWidth="130.0" promptText="Товар" />
+      <TextField fx:id="Amount_TF" layoutX="304.0" layoutY="345.0" prefHeight="30.0" prefWidth="54.0" promptText="Кол-во" />
+      <Button fx:id="Delete_sd_btn" layoutX="455.0" layoutY="345.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Удалить" AnchorPane.rightAnchor="25.0" />
+      <Button fx:id="Add_sd_btn" layoutX="373.0" layoutY="345.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Добавить" />
+      <Button fx:id="Done_btn" alignment="TOP_LEFT" layoutX="221.0" layoutY="596.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Завершить">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="319.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Checkmark1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

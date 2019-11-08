@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SuppliesHistoryController">
+   <TableView fx:id="SupplyH_TV" layoutX="25.0" layoutY="109.0" prefHeight="520.0" prefWidth="800.0"
+              AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0"
+              AnchorPane.topAnchor="155.0">
+      <columns>
+         <TableColumn fx:id="ID_supply_col" prefWidth="112.0" text="Номер поставки"/>
+         <TableColumn fx:id="Product_col" prefWidth="130.0" text="Товар"/>
+         <TableColumn fx:id="Cateogory_col" prefWidth="182.0" text="Категория"/>
+         <TableColumn fx:id="Amount_col" prefWidth="89.0" text="Количество"/>
+         <TableColumn fx:id="Supplier_col" prefWidth="175.0" text="Поставщик"/>
+         <TableColumn fx:id="Date_col" prefWidth="115.0" text="Дата "/>
+      </columns>
+   </TableView>
+   <AnchorPane prefHeight="60.0" prefWidth="850.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label layoutX="307.0" layoutY="13.0" prefHeight="35.0" prefWidth="236.0" text="История поставок"
+             textFill="WHITE" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="307.0"
+             AnchorPane.topAnchor="13.0">
+         <font>
+            <Font name="System Bold Italic" size="24.0"/>
+         </font>
+      </Label>
+   </AnchorPane>
+   <ComboBox fx:id="ID_CB" layoutX="25.0" layoutY="97.0" prefHeight="32.0" prefWidth="112.0" promptText="№ Поставки"/>
+   <TextField fx:id="Product_TF" layoutX="164.0" layoutY="97.0" prefHeight="32.0" prefWidth="149.0" promptText="Товар"
+              visible="false"/>
+   <ImageView fx:id="Update_img" fitHeight="28.0" fitWidth="28.0" layoutX="794.0" layoutY="99.0" pickOnBounds="true"
+              preserveRatio="true">
+      <Image url="@../Images/arrow1.png"/>
+   </ImageView>
+   <ImageView fx:id="Search_img" accessibleRole="BUTTON" fitHeight="28.0" fitWidth="28.0" layoutX="739.0" layoutY="99.0"
+              pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Images/search.png"/>
+   </ImageView>
+   <Button fx:id="Update_btn" layoutX="660.0" layoutY="97.0" maxHeight="32.0" maxWidth="34.0" minHeight="32.0"
+           minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0"/>
+   <Button fx:id="Search_btn" layoutX="602.0" layoutY="97.0" maxHeight="32.0" maxWidth="34.0" minHeight="32.0"
+           minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0"/>
+   <DatePicker fx:id="Date_start_DP" layoutX="329.0" layoutY="97.0" prefHeight="32.0" prefWidth="110.0" promptText="C"/>
+   <DatePicker fx:id="Date_finish_DP" layoutX="460.0" layoutY="97.0" prefHeight="32.0" prefWidth="110.0"
+               promptText="По"/>
+   <TextField fx:id="Product_TF1" layoutX="158.0" layoutY="97.0" prefHeight="32.0" prefWidth="149.0"
+              promptText="Товар"/>
+   <Button fx:id="Excel_btn" layoutX="719.0" layoutY="97.0" maxHeight="32.0" maxWidth="34.0" minHeight="32.0"
+           minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0"/>
+   <ImageView fx:id="Excel_img" fitHeight="28.0" fitWidth="28.0" layoutX="753.0" layoutY="69.0" pickOnBounds="true"
+              preserveRatio="true">
+      <Image url="@../Images/excel.png"/>
+   </ImageView>
+</AnchorPane>

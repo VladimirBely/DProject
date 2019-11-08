@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SuppliersController">
+   <children>
+      <TextField fx:id="Adress_TF" cache="true" layoutX="210.0" layoutY="83.0" prefHeight="32.0" prefWidth="150.0" promptText="Адресс">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Name_TF" cache="true" layoutX="20.0" layoutY="83.0" prefHeight="32.0" prefWidth="150.0" promptText="Имя/Название" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Telephone_TF" layoutX="398.0" layoutY="83.0" prefHeight="32.0" prefWidth="150.0" promptText="Телефон">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="Suppliers_TV" layoutX="34.0" layoutY="139.0" prefHeight="345.0" prefWidth="680.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="Name_col" maxWidth="290.0" prefWidth="290.0" text="Имя/Название" />
+            <TableColumn fx:id="Adress_col" prefWidth="237.0" text="Адресс" />
+            <TableColumn fx:id="Telephone_col" maxWidth="1.7976931348623157E308" prefWidth="163.0" resizable="false" text="Телефон" />
+            <TableColumn fx:id="ID_col" maxWidth="124.0" minWidth="0.0" prefWidth="0.0" resizable="false" text="ID" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="1.0" prefHeight="60.0" prefWidth="720.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="303.0" layoutY="13.0" text="Поставщики" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="Add_img" accessibleRole="BUTTON" fitHeight="26.0" fitWidth="26.0" layoutX="693.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.0">
+         <image>
+            <Image url="@../Images/Add.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Edit_img" accessibleRole="BUTTON" fitHeight="26.0" fitWidth="26.0" layoutX="693.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.0">
+         <image>
+            <Image url="@../Images/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Delete_img" accessibleRole="BUTTON" fitHeight="26.0" fitWidth="26.0" layoutX="693.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.0">
+         <image>
+            <Image url="@../Images/minus.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Add_btn" layoutX="568.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" />
+      <Button fx:id="Edit_btn" layoutX="617.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" />
+      <Button fx:id="Delete_btn" layoutX="666.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" />
+   </children>
+</AnchorPane>

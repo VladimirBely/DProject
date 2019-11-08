@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="647.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.OrderController">
+   <children>
+      <AnchorPane layoutX="1.0" minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="274.0" layoutY="12.0" text="Заказ" textFill="WHITE" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="273.0" AnchorPane.topAnchor="12.0">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="Client_CB" layoutX="15.0" layoutY="70.0" prefHeight="32.0" prefWidth="150.0" promptText="Получатель" visibleRowCount="50" AnchorPane.leftAnchor="15.0" />
+            <DatePicker fx:id="Date_DP" layoutX="190.0" layoutY="70.0" prefHeight="32.0" prefWidth="120.0" promptText="Дата" />
+            <TextField fx:id="Discount_TF" alignment="CENTER" cache="true" layoutX="339.0" layoutY="70.0" prefHeight="32.0" prefWidth="100.0" promptText="Скидка">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="OrderTV" layoutX="90.0" layoutY="123.0" prefHeight="135.0" prefWidth="570.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <columns>
+                  <TableColumn fx:id="ID_col" minWidth="0.0" prefWidth="97.0" text="Номер заказа" />
+                  <TableColumn fx:id="Client_col" prefWidth="225.0" text="Получатель" />
+                  <TableColumn fx:id="Date_col" prefWidth="110.0" text="Дата заказа" />
+                  <TableColumn fx:id="Discount_col" prefWidth="67.0" resizable="false" text="Скидка" />
+                  <TableColumn fx:id="Totalcost_col" prefWidth="140.0" resizable="false" text="Общая стоимость" />
+               </columns>
+            </TableView>
+            <Button fx:id="Add_btn" layoutX="466.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="76.0" text="Добавить" />
+            <Button fx:id="Delete_btn" layoutX="559.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="76.0" text="Удалить" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="280.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #2b2b4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="231.0" layoutY="12.0" text="Детали заказа" textFill="WHITE" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="12.0">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="Product_CB" layoutX="14.0" layoutY="77.0" prefHeight="30.0" prefWidth="150.0" promptText="Товар" visibleRowCount="50" AnchorPane.leftAnchor="15.0" />
+            <TextField fx:id="Amount_TF" cache="true" layoutX="325.0" layoutY="77.0" prefHeight="30.0" prefWidth="120.0" promptText="Кол-во">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="ID_Send_CB" layoutX="184.0" layoutY="77.0" prefHeight="30.0" prefWidth="120.0" promptText="Заказ" />
+            <TableView fx:id="OrderDetails_TV" layoutX="18.0" layoutY="122.0" prefHeight="180.0" prefWidth="568.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <columns>
+                  <TableColumn fx:id="Product_col" prefWidth="194.0" text="Наименование продукта" />
+                  <TableColumn fx:id="Order_col" prefWidth="177.0" text="Номер заказа" />
+                  <TableColumn fx:id="Amount_col" prefWidth="127.0" resizable="false" text="Количество" />
+                  <TableColumn fx:id="Price_column" maxWidth="147.0" minWidth="0.0" prefWidth="140.0" text="Цена" />
+                  <TableColumn fx:id="Id_column" maxWidth="122.0" minWidth="0.0" prefWidth="0.0" text="ID" />
+               </columns>
+            </TableView>
+            <Button fx:id="OD_Add_btn" layoutX="467.0" layoutY="77.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="76.0" text="Добавить" />
+            <Button fx:id="OD_Delete_btn" layoutX="559.0" layoutY="77.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="76.0" text="Удалить" />
+            <Button fx:id="Done_btn" alignment="TOP_LEFT" layoutX="250.0" layoutY="319.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Завершить">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="Done_image" fitHeight="24.0" fitWidth="24.0" layoutX="347.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Checkmark1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

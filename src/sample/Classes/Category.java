@@ -16,27 +16,12 @@ public class Category {
     }
 
 
-    /*public String getProduct_category() {
-        return Product_category.get();
-    }*/
-
     public StringProperty getProduct_category() {
         return Product_category;
     }
-
-    /*public void setProduct_category(String product_category) {
-        this.Product_category.set(product_category);
-    }*/
-
-   /* public int getId() {
-        return id.get();
-    }*/
-
     public IntegerProperty getId() {
         return id;
     }
 
-    /*public void setId(int id) {
-        this.id.set(id);
-    }*/
+
 }
